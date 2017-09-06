@@ -12,4 +12,4 @@
  * User must avoid the bugs.
 
 
-Good Luck!:D :+1:
+Good Luck! :+1:
