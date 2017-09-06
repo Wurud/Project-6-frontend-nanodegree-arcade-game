@@ -1,5 +1,10 @@
 # Classic Arcade Game
 
+### How to start:
+
+ * Download the game from [GitHub](https://github.com/Wurud/frontend-nanodegree-arcade-game)
+ * Run the index.html file on your browser.
+
 ### How to play:
 
  * User should help the Hero character to reach the water.
