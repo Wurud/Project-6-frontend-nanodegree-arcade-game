@@ -18,13 +18,23 @@ Enemy.prototype.update = function(dt) {
     this.x += (this.speed * dt);
 
     //To reset position of the enemies to the left side of canvas.
-    // Canvas width = 505
+    //Canvas width = 505
     if (this.x > 505) {
         this.x = 0;
     }
-    detectCollision(this);
+
+    this.detectCollision(this);
 };
 
+// Draw the enemy on the screen, required method for game
+Enemy.prototype.detectCollision = function(enemy) {
+    if (player.x < enemy.x + enemy.width && player.x + player.width > enemy.x &&
+        player.y < enemy.y + enemy.height && player.height + player.y > enemy.y) {
+        // When collision detected, display console.log messege and reset player position th the starting point.
+        console.log("Ooops!!");
+        player.reset();
+    }
+};
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
@@ -48,7 +58,7 @@ Player.prototype.update = function() {
         this.y = 400;
     } else if (this.y < 0) {
         //If the Player reach the water, display the console.log messege and reset the Player position.
-        console.log("Congratulations you made it!");
+        console.log("Congratulations, you've made it :)");
         player.reset();
     }
 
@@ -100,15 +110,6 @@ for (var i in enemyPosY) {
     allEnemies.push(enemy);
 };
 
-
-detectCollision = function(enemy) {
-    if (player.x < enemy.x + enemy.width && player.x + player.width > enemy.x &&
-        player.y < enemy.y + enemy.height && player.height + player.y > enemy.y) {
-        // When collision detected, display console.log messege and reset player position th the starting point.
-        console.log("Ooops!!");
-        player.reset();
-    }
-};
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
