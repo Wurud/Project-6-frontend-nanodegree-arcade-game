@@ -59,7 +59,7 @@ Player.prototype.update = function() {
     } else if (this.y < 0) {
         //If the Player reach the water, display the console.log messege and reset the Player position.
         console.log("Congratulations, you've made it :)");
-        player.reset();
+        this.reset();
     }
 
     if (this.x > 400) {
