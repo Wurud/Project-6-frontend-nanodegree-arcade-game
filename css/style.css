@@ -1,3 +1,78 @@
-body {
+html, body {
+    font-family: 'Orbitron', sans-serif;
     text-align: center;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    color: green;
+}
+
+/* Start page header */
+.header {
+    height: 3px;
+    position: static;
+}
+
+.header > h1 > span {
+    padding-right: 45px;
+    padding-left: 5px;
+    color: red;
+}
+
+/* Game Over page */
+.screen {
+    margin: auto;
+}
+
+.screen .title {
+    font-size: 105px;
+    height: 12%;
+    padding-top: 200px;
+}
+
+.hide {
+    display: none;
+}
+
+.score {
+    color: red;
+    font-size: 50px;
+    padding-bottom: 50px;
+}
+
+.screen .score span {
+    margin-left: 5px;
+}
+
+.screen-background {
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.screen .footer {
+    background: url(../images/grass-block.png);
+    height: 170px;
+    width: 100%;
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+}
+
+/* Play Again button */
+.button {
+    background: black;
+    color: #fff;
+    display: inline-block;
+    padding: 25px 40px;
+    font-size: 30px;
+}
+
+.button:hover {
+  background: green;
 }

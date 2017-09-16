@@ -14,6 +14,8 @@
  * a little simpler to work with.
  */
 
+
+
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
@@ -25,8 +27,8 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 650;
+    canvas.width = 900;
+    canvas.height = 948;
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -94,6 +96,11 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
+
+        allGems.forEach(function(gem) {
+            gem.update(dt);
+        });
+
        player.update();
     }
 
@@ -112,12 +119,16 @@ var Engine = (function(global) {
                 'images/stone-block.png',   // Row 1 of 4 of stone
                 'images/stone-block.png',   // Row 2 of 4 of stone
                 'images/stone-block.png',   // Row 3 of 4 of stone
-                'images/stone-block.png',  // Row 4 of 4 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/stone-block.png',   // Row 4 of 4 of stone
+                'images/grass-block.png',   // Row 1 of 1 of grass
+                'images/stone-block.png',   // Row 1 of 4 of stone
+                'images/stone-block.png',   // Row 2 of 4 of stone
+                'images/stone-block.png',   // Row 3 of 4 of stone
+                'images/stone-block.png',   // Row 4 of 4 of stone
+                'images/water-block.png',   // Top row is water
             ],
-            numRows = 7,
-            numCols = 5,
+            numRows = 11,
+            numCols = 10,
             row, col;
 
         /* Loop through the number of rows and columns we've defined above
@@ -152,6 +163,10 @@ var Engine = (function(global) {
             enemy.render();
         });
 
+        allGems.forEach(function(gem) {
+            gem.render();
+        });
+
         player.render();
     }
 
@@ -172,7 +187,8 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-princess-girl.png'
+        'images/char-boy.png',
+        'images/Gem Orange.png'
     ]);
     Resources.onReady(init);
 
