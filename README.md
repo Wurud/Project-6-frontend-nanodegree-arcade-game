@@ -1,17 +1,32 @@
-# Classic Arcade Game
 
-### will be updated today.
+# Classic Arcade Game :beetle:
+
+### Description:
+
+Fifth project from Front End Nanodegree Program in [Udacity.](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
+The game was inspired by Super Mario Game theme :star2:
 
 ### How to start:
 
- * Download the game from [GitHub](https://github.com/Wurud/frontend-nanodegree-arcade-game.git)
- * Run the index.html file on your browser.
+ * Download the game from [GitHub](https://github.com/Wurud/frontend-nanodegree-arcade-game.git) :space_invader:
+ * Simply, run the index.html file on your Chrome browser and start the FUN! :coffee: :sunglasses:
 
 ### How to play:
 
- * User should help the Hero character to reach the water.
- * User can move the Hero character by pressing the main (left, right, up and down) arrow keys on his/her keyboard.
- * User must avoid the bugs.
+ 1. You can move the Hero by pressing the main (:arrow_left: - :arrow_right: - :arrow_up: - :arrow_down:) arrow keys on the keyboard.
+ 2. You have ** ONE MINUTE ** to finish the game with the hightest score.
+ 3. You have Three lives to play with, so be carful !
+ 4. You will add 25 points to your score if you reach the water.
+ 5. You will add 10 points to your score if collect :gem:.
+ 6. You must avoid the :beetle::beetle::beetle::beetle:, if they heart you you will lose one live.
 
 
-Good Luck! :+1:
+### Resources used:
+
+https://www.w3schools.com/graphics/game_sound.asp
+
+
+### Screenshots:
+![Start-Page](screenshots/Screen Shot 2017-09-16 at 2.26.38 PM.png?raw=true"Start-Page")
+
+Good Luck! :heart_eyes: :+1:
