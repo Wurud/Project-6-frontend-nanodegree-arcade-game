@@ -27,6 +27,6 @@ https://www.w3schools.com/graphics/game_sound.asp
 
 
 ### Screenshots:
-![Start-Page](Screenshots/Screen Shot 2017-09-16 at 2.26.38 PM.png?raw=true"Start-Page")
+![Start-Page](screenshots/Start Page.png?raw=true"Start-Page")
 
 Good Luck! :heart_eyes: :+1:
