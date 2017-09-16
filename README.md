@@ -18,7 +18,7 @@ The game was inspired by Super Mario Game theme :star2:
  3. You have Three lives to play with, so be carful !
  4. You will add 25 points to your score if you reach the water.
  5. You will add 10 points to your score if collect :gem:.
- 6. You must avoid the :beetle::beetle::beetle::beetle:, if they heart you you will lose one live.
+ 6. You must avoid the :beetle::beetle::beetle::beetle:, if they heart you you will lose a live.
 
 
 ### Resources used:
@@ -27,6 +27,6 @@ https://www.w3schools.com/graphics/game_sound.asp
 
 
 ### Screenshots:
-![Start-Page](screenshots/Screen Shot 2017-09-16 at 2.26.38 PM.png?raw=true"Start-Page")
+![Start-Page](Screenshots/Screen Shot 2017-09-16 at 2.26.38 PM.png?raw=true"Start-Page")
 
 Good Luck! :heart_eyes: :+1:
