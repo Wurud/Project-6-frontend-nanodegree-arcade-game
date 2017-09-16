@@ -160,8 +160,8 @@ var Gem = function(x, y, speed) {
     this.x = x;
     this.y = y;
     this.sprite = 'images/Gem Orange.png';
-    this.height = 50;
-    this.width = 50;
+    this.height = 25;
+    this.width = 25;
     this.speed = speed + (Math.random() * 400 + 150);
 };
 
@@ -213,7 +213,7 @@ var player = new Player();
 var allGems = [];
 
 // The Y coordinate for all Gems objects.
-var allGemsY = [60, 145, 390, 470];
+var allGemsY = [70, 155, 405, 485];
 
 //Loop through the enemyPosY array, then add the enemy objects to allEnemies array.
 for (var i in enemyPosY) {
