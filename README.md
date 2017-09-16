@@ -29,6 +29,3 @@ https://www.w3schools.com/graphics/game_sound.asp
 ### Screenshots:
 #### Start to Play:
 ![alt start](https://github.com/Wurud/frontend-nanodegree-arcade-game/blob/master/screenshots/Start%20Page.png "Start Game page")
-
-#### Game Over:
-![alt End](https://github.com/Wurud/frontend-nanodegree-arcade-game/blob/master/screenshots/End%20Page.png "Game Over page")
