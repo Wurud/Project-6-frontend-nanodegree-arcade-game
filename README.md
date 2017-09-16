@@ -26,4 +26,4 @@ The game theme was inspired by Super Mario Game theme :star2:
 https://www.w3schools.com/graphics/game_sound.asp
 
 ### Screenshot:
-![alt start](https://github.com/Wurud/frontend-nanodegree-arcade-game/blob/master/screenshots/Start%20Page.png "Start Game page")
+![alt start](https://github.com/Wurud/frontend-nanodegree-arcade-game/blob/master/screenshots/Start%20Game.png "Start Game page")
