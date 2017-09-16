@@ -28,7 +28,7 @@ var Engine = (function(global) {
         lastTime;
 
     canvas.width = 900;
-    canvas.height = 948;
+    canvas.height = 720;
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -118,16 +118,13 @@ var Engine = (function(global) {
                 'images/water-block.png',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 4 of stone
                 'images/stone-block.png',   // Row 2 of 4 of stone
-                'images/stone-block.png',   // Row 3 of 4 of stone
                 'images/stone-block.png',   // Row 4 of 4 of stone
                 'images/grass-block.png',   // Row 1 of 1 of grass
-                'images/stone-block.png',   // Row 1 of 4 of stone
                 'images/stone-block.png',   // Row 2 of 4 of stone
                 'images/stone-block.png',   // Row 3 of 4 of stone
-                'images/stone-block.png',   // Row 4 of 4 of stone
                 'images/water-block.png',   // Top row is water
             ],
-            numRows = 11,
+            numRows = 8,
             numCols = 10,
             row, col;
 

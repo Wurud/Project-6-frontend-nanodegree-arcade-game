@@ -10,7 +10,8 @@ html, body {
 /* Start page header */
 .header {
     height: 3px;
-    position: static;
+    position: absolute;
+    padding-left: 260px;
 }
 
 .header > h1 > span {
@@ -27,7 +28,7 @@ html, body {
 .screen .title {
     font-size: 105px;
     height: 12%;
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
 .hide {
@@ -37,7 +38,7 @@ html, body {
 .score {
     color: red;
     font-size: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .screen .score span {
@@ -64,12 +65,12 @@ html, body {
     left: 0px;
 }
 
-/* Play Again button */
+/* Button */
 .button {
     background: red;
     color: #fff;
     display: inline-block;
-    padding: 25px 40px;
+    padding: 28px 30px;
     font-size: 30px;
 }
 

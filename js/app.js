@@ -2,7 +2,7 @@
 var score = 0;
 var playerLive = 3;
 var playerStartPosX = 400;
-var playerStartPosY = 380;
+var playerStartPosY = 300;
 var seconds = 60;
 var gemSound;
 var enemyPunch;
@@ -25,7 +25,7 @@ function startGame() {
 }
 
 //https://www.w3schools.com/graphics/game_sound.asp
-//Create an audio object to play the mp3 files.
+//Create an audio object to play mp3 files.
 var audio = function(src) {
     this.audio = document.createElement("audio");
     this.audio.src = src;
@@ -46,7 +46,7 @@ var Enemy = function(x, y, speed) {
     this.y = y;
     this.height = 40;
     this.width = 30;
-    this.speed = speed + 40 + Math.floor(Math.random() * 310);
+    this.speed = speed + 50 + Math.floor(Math.random() * 300);
     this.sprite = 'images/enemy-bug.png';
 };
 
@@ -100,7 +100,7 @@ Enemy.prototype.render = function() {
 var Player = function() {
     this.x = playerStartPosX;
     this.y = playerStartPosY;
-    this.speed = 50;
+    this.speed = 55;
     this.height = 32;
     this.width = 35;
     this.sprite = 'images/char-boy.png';
@@ -109,10 +109,10 @@ var Player = function() {
 // Update the Player position, required method for game.
 Player.prototype.update = function() {
     // To make sure the Player doesn't move outside the canvas.
-    if (this.y > 800) {
-        this.y = 701;
+    if (this.y >= 620) {
+        this.y = 465;
         //Check if the player reaches the water in either sides of the canvas.
-    } else if (this.y <= 0 || this.y === 701) {
+    } else if (this.y <= 0 || this.y == 465) {
         waterPoints.start();
         //Initiate a new object to load the sound when reach the water the second time.
         waterPoints = new audio("sound/water.mp3");
@@ -137,9 +137,9 @@ Player.prototype.handleInput = function(keyPress) {
     } else if (keyPress == 'right') {
         this.x += this.speed + 50;
     } else if (keyPress == 'up') {
-        this.y -= this.speed + 20;
+        this.y -= this.speed + 30;
     } else if (keyPress == 'down') {
-        this.y += this.speed + 39;
+        this.y += this.speed + 30;
     }
 };
 
@@ -156,13 +156,13 @@ Player.prototype.reset = function() {
 
 // Create a new Gem object.
 //Add speed property to allow Gems to move on the canvas.
-var Gem = function(x, y) {
+var Gem = function(x, y, speed) {
     this.x = x;
     this.y = y;
     this.sprite = 'images/Gem Orange.png';
     this.height = 50;
     this.width = 50;
-    this.speed = 30 + Math.floor(Math.random() * 200);
+    this.speed = speed + (Math.random() * 400 + 150);
 };
 
 Gem.prototype.update = function(dt) {
@@ -170,6 +170,7 @@ Gem.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     this.x += (this.speed * dt);
+
     if (this.x > 900) {
         // To update the gem position randomly.
         this.x = 20 + Math.floor(Math.random() * 300);
@@ -203,7 +204,7 @@ Gem.prototype.render = function() {
 var allEnemies = [];
 
 // The Y coordinate for all enemies objects.
-var enemyPosY = [60, 145, 230, 310, 555, 630, 720];
+var enemyPosY = [60, 145, 230, 390, 470];
 
 //Initiate a new Player.
 var player = new Player();
@@ -212,19 +213,29 @@ var player = new Player();
 var allGems = [];
 
 // The Y coordinate for all Gems objects.
-var allGemsY = [60, 230, 555, 630];
+var allGemsY = [60, 145, 390, 470];
 
 //Loop through the enemyPosY array, then add the enemy objects to allEnemies array.
 for (var i in enemyPosY) {
     var enemy;
-    enemy = new Enemy(0, enemyPosY[i], Math.floor(Math.random() * 350));
-    allEnemies.push(enemy);
+    // Check Enemy Y position, then create three Enemy objects with random speed.
+    // to increase the leve of difficulty.
+    if (enemyPosY[i] > 380) {
+        enemyOne = new Enemy(0, enemyPosY[i], Math.floor(Math.random() * 200));
+        enemyTwo = new Enemy(0, enemyPosY[i], Math.floor(Math.random() * 400));
+        enemyThree = new Enemy(0, enemyPosY[i], Math.floor(Math.random() * 600));
+        // Add new objects to the array, then display them on the canvas.
+        allEnemies.push(enemyOne, enemyTwo, enemyThree);
+    } else {
+        enemy = new Enemy(0, enemyPosY[i], Math.floor(Math.random() * 200));
+        allEnemies.push(enemy);
+    }
 };
 
 //Loop through the allGemsY array, then add the gem objects to allGems array.
 for (var x in allGemsY) {
     var gem;
-    gem = new Gem(0, allGemsY[x], Math.floor(Math.random() * 300));
+    gem = new Gem(0, allGemsY[x], Math.floor(Math.random() * 100));
     allGems.push(gem);
 };
 
@@ -263,7 +274,6 @@ function timer() {
                 document.getElementById("gameOver").style.display = "block";
                 $("#gameOver #score").html(score);
             }
-
         }
         //If player live is equal to 0, display Game Over Page with the final score.
         if (playerLive == 0) {
