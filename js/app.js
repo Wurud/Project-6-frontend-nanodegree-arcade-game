@@ -8,6 +8,8 @@ var gemSound;
 var enemyPunch;
 var waterPoints;
 var themeSound;
+var achievement;
+var gong;
 
 // Initiate a new objects, then call timer and play functions
 // when loading the body tag of the index file.
@@ -16,13 +18,15 @@ function startGame() {
     enemyPunch = new audio("sound/punch.mp3");
     themeSound = new audio("sound/music.mp3");
     waterPoints = new audio("sound/water.mp3");
+    achievement = new audio("sound/achievement.mp3");
+    gong = new audio("sound/gong.mp3");
     timer();
     themeSound.start();
 }
 
 //https://www.w3schools.com/graphics/game_sound.asp
 //Create an audio object to play the mp3 files.
-var audio = function (src) {
+var audio = function(src) {
     this.audio = document.createElement("audio");
     this.audio.src = src;
     this.audio.setAttribute("preload", "auto");
@@ -30,6 +34,9 @@ var audio = function (src) {
     document.body.appendChild(this.audio)
     this.start = function() {
         this.audio.play();
+    }
+    this.stop = function() {
+        this.audio.pause();
     }
 }
 
@@ -175,7 +182,7 @@ Gem.prototype.update = function(dt) {
 Gem.prototype.detectCollision = function(gem) {
     if (player.x < gem.x + gem.width && player.x + player.width > gem.x &&
         player.y < gem.y + gem.height && player.height + player.y > gem.y) {
-        gemSound.start();;
+        gemSound.start();
         //Initiate a new gem sound.
         gemSound = new audio("sound/gem.mp3");
         score += 10;
@@ -244,14 +251,24 @@ function timer() {
         }
         // If the remaining time equal to 0, display Game Over Page with the final score.
         else if (seconds <= 0) {
-            document.getElementById("gameOver").style.display = "block";
-            $("#gameOver #score").html(score);
-
-            //If player live is equal to 0, display Game Over Page with the final score.
-            if (playerLive == 0) {
+            if (score > 0) {
+                themeSound.stop();
+                achievement.start();
                 document.getElementById("gameOver").style.display = "block";
                 $("#gameOver #score").html(score);
             }
+            if (score === 0) {
+                themeSound.stop();
+                gong.start();
+                document.getElementById("gameOver").style.display = "block";
+                $("#gameOver #score").html(score);
+            }
+
+        }
+        //If player live is equal to 0, display Game Over Page with the final score.
+        if (playerLive == 0) {
+            document.getElementById("gameOver").style.display = "block";
+            $("#gameOver #score").html(score);
         }
     }
     tick();

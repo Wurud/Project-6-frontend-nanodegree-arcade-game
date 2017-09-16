@@ -1,5 +1,7 @@
 # Classic Arcade Game
 
+### will be updated today.
+
 ### How to start:
 
  * Download the game from [GitHub](https://github.com/Wurud/frontend-nanodegree-arcade-game.git)
