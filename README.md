@@ -27,8 +27,7 @@ https://www.w3schools.com/graphics/game_sound.asp
 
 
 ### Screenshots:
-[Start]: https://github.com/Wurud/frontend-nanodegree-arcade-game/blob/master/screenshots/Start%20Page.png "Start Page"
+![alt text](https://github.com/Wurud/frontend-nanodegree-arcade-game/blob/master/screenshots/Start%20Page.png "Logo Title Text 1")
 
-[End]: https://github.com/Wurud/frontend-nanodegree-arcade-game/blob/master/screenshots/End%20Page.png "End Page"
 
 Good Luck! :heart_eyes: :+1:
