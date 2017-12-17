@@ -1,6 +1,10 @@
 
 # Classic Arcade Game :beetle:
 
+### Live Example
+
+[Click here](https://wurud.github.io/Project-6-frontend-nanodegree-arcade-game/)
+
 ### Description:
 
 Fifth project from Front End Nanodegree Program in [Udacity.](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
