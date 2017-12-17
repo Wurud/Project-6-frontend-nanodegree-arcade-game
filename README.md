@@ -1,7 +1,7 @@
 
 # Classic Arcade Game :beetle:
 
-### Live Example  [Click Here!](https://wurud.github.io/Project-6-frontend-nanodegree-arcade-game/)
+### Live Example:  [Click Here!](https://wurud.github.io/Project-6-frontend-nanodegree-arcade-game/)
 
 ### Description:
 
