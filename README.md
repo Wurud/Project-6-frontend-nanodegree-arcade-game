@@ -1,7 +1,9 @@
 
 # Classic Arcade Game :beetle:
 
-## Live Example:  [Click Here!](https://wurud.github.io/Project-6-frontend-nanodegree-arcade-game/) :beetle: Google Chrome :beetle: 
+## Browser :beetle: Google Chrome :beetle: 
+
+## Live Example:  [Click Here!](https://wurud.github.io/Project-6-frontend-nanodegree-arcade-game/) :beetle:
 
 ### Description:
 
